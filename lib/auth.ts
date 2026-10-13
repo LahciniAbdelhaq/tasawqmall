@@ -5,7 +5,11 @@ import { SignJWT, jwtVerify } from 'jose';
 import { db } from './db';
 
 export const ADMIN_COOKIE = 'bm_admin';
-export const authSecret = () => new TextEncoder().encode(process.env.AUTH_SECRET || 'dev-secret-change-me');
+export const authSecret = () => {
+  // the fallback is public (it is in the repo): never sign admin sessions with it in production
+  if (!process.env.AUTH_SECRET && process.env.NODE_ENV === 'production') throw new Error('AUTH_SECRET is not set: add it to the environment variables.');
+  return new TextEncoder().encode(process.env.AUTH_SECRET || 'dev-secret-change-me');
+};
 
 export async function signAdminToken(id: number, days = 7) {
   return new SignJWT({ kind: 'admin' })

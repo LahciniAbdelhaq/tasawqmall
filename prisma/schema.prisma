@@ -4,9 +4,8 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL") // pooled connection (the app)
-  directUrl = env("DATABASE_URL_UNPOOLED") // direct connection (creating tables)
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model AdminUser {

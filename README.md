@@ -5,7 +5,7 @@ The static clone of beautymall.ma rebuilt as a Next.js 15 shop with the original
 ## Run
 
     npm install
-    cp .env.example .env # then set DATABASE_URL / DATABASE_URL_UNPOOLED (PostgreSQL)
+    cp .env.example .env # then set DATABASE_URL (PostgreSQL)
     npm run setup        # creates the tables, imports the catalogue and the admin
     npm run dev          # http://localhost:3002
 
@@ -13,8 +13,8 @@ The static clone of beautymall.ma rebuilt as a Next.js 15 shop with the original
 
 1. Import the GitHub repo in Vercel (framework: Next.js; the `vercel-build` script is used).
 2. Storage tab: create a **Postgres** database (Neon) and a **Blob** store and connect both to the
-   project. They add `DATABASE_URL`, `DATABASE_URL_UNPOOLED` and `BLOB_READ_WRITE_TOKEN`
-   (if the database gives only one URL, add `DATABASE_URL_UNPOOLED` with the same value).
+   project, then make sure a variable named exactly `DATABASE_URL` holds the database URL
+   (add it by hand if the integration used another name). Blob adds `BLOB_READ_WRITE_TOKEN`.
 3. Add `AUTH_SECRET` (long random string), `SITE_URL` (https://your-domain), `ADMIN_EMAIL`,
    `ADMIN_PASSWORD`.
 4. Deploy. Each build runs `prisma db push` (creates/updates the tables) and the seed, which imports
@@ -22,7 +22,7 @@ The static clone of beautymall.ma rebuilt as a Next.js 15 shop with the original
 
 To move the data of the old local SQLite database (orders, settings, edits) into Postgres:
 
-    DATABASE_URL=... DATABASE_URL_UNPOOLED=... npm run db:import-sqlite -- prisma/dev.db --force
+    DATABASE_URL=... npm run db:import-sqlite -- prisma/dev.db --force
 
 `--force` wipes the Postgres tables first (needed if a Vercel build already seeded them).
 

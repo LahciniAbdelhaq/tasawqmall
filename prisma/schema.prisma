@@ -226,12 +226,14 @@ model PageView {
   id      Int      @id @default(autoincrement())
   visitId String
   visit   Visit    @relation(fields: [visitId], references: [id], onDelete: Cascade)
-  path    String
-  title   String?
-  at      DateTime @default(now())
+  path     String
+  title    String?
+  at       DateTime @default(now())
+  duration Int      @default(0) // seconds the page was on screen (tab visible)
 
   @@index([at])
   @@index([path])
+  @@index([visitId])
 }
 
 /// site announcements: top bar, popup, banner

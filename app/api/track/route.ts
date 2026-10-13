@@ -8,11 +8,21 @@ type Body = {
   type: 'view' | 'ping' | 'leave';
   sid: string; vid: string;
   path?: string; title?: string; ref?: string; lang?: string;
+  dur?: number; // seconds on screen for `path` (ping / leave)
+  prev?: { path?: string; dur?: number }; // the page the visitor just left (view)
   utm?: { source?: string | null; medium?: string | null; campaign?: string | null };
   cart?: { items?: number; value?: number };
 };
 const ID = /^[a-z0-9]{8,40}$/;
 const clip = (s: unknown, n: number) => (typeof s === 'string' ? s.slice(0, n) : null);
+
+/** Time on screen of the latest view of `path` in this session (only ever grows, capped at 4 h). */
+async function setDuration(sid: string, path: string | null, dur: unknown) {
+  const secs = Math.min(4 * 3600, Math.floor(Number(dur) || 0));
+  if (!path || secs <= 0) return;
+  const view = await db.pageView.findFirst({ where: { visitId: sid, path }, orderBy: { at: 'desc' }, select: { id: true, duration: true } });
+  if (view && secs > view.duration) await db.pageView.update({ where: { id: view.id }, data: { duration: secs } });
+}
 
 /** First-party analytics beacon: page views + heartbeats (live visitors). */
 export async function POST(req: Request) {
@@ -34,13 +44,18 @@ export async function POST(req: Request) {
 
   if (b.type === 'leave') {
     await db.visit.updateMany({ where: { id: b.sid }, data: { lastSeen: new Date(now.getTime() - 60_000) } });
+    await setDuration(b.sid, path, b.dur);
     return res;
   }
   const existing = await db.visit.findUnique({ where: { id: b.sid } });
   if (b.type === 'ping') {
-    if (existing) await db.visit.update({ where: { id: b.sid }, data: { lastSeen: now, currentPath: path, ...cart } });
+    if (existing) {
+      await db.visit.update({ where: { id: b.sid }, data: { lastSeen: now, currentPath: path, ...cart } });
+      await setDuration(b.sid, path, b.dur);
+    }
     return res;
   }
+  if (existing && b.prev) await setDuration(b.sid, clip(b.prev.path, 300), b.prev.dur);
   if (!existing) {
     const campaignId = Number(jar.get('bm_cmp')?.value) || null;
     const campaign = campaignId ? await db.campaign.findUnique({ where: { id: campaignId } }) : null;

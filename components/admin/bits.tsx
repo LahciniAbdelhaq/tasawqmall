@@ -65,3 +65,8 @@ export function PeriodTabs({ base, days, extra = '' }: { base: string; days: num
 
 export const pct = (n: number) => `${n.toFixed(1).replace('.', ',')} %`;
 export const dh = (n: number) => `${Math.round(n).toLocaleString('fr-FR')} DH`;
+/** 75 → "1 min 15 s", 3700 → "1 h 1 min" */
+export const dur = (s: number) => {
+  s = Math.round(s);
+  return s < 60 ? `${s} s` : s < 3600 ? `${Math.floor(s / 60)} min${s % 60 ? ` ${s % 60} s` : ''}` : `${Math.floor(s / 3600)} h ${Math.floor((s % 3600) / 60)} min`;
+};

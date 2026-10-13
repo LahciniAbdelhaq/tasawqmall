@@ -53,7 +53,7 @@ export default function LiveView() {
                   <tr key={v.id}>
                     <td>
                       <a className="row-link" href={v.path} target="_blank" rel="noreferrer">{decodeURIComponent(v.path).slice(0, 60)}</a>
-                      <div className="muted" style={{ fontSize: 12 }}>Entrée : {decodeURIComponent(v.landing).slice(0, 50)}</div>
+                      <div className="muted" style={{ fontSize: 12 }}>Entrée : {decodeURIComponent(v.landing).slice(0, 50)} · <a className="link" href={`/admin/live/${v.id}`}>Parcours →</a></div>
                     </td>
                     <td>{v.source || 'direct'}{v.campaign && <div className="muted" style={{ fontSize: 12 }}>{v.campaign}</div>}</td>
                     <td><Icon name={v.device === 'mobile' ? 'smartphone' : 'monitor'} size={15} /> {v.browser} · {v.os}{v.lang && <span className="muted"> · {v.lang}</span>}</td>

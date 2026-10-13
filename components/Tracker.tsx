@@ -97,6 +97,12 @@ export default function Tracker({ pixels }: { pixels: Pixels }) {
   const pathname = usePathname();
   const search = useSearchParams();
   const ids = useRef<{ vid: string; sid: string } | null>(null);
+  // time the current page has been on screen (paused while the tab is hidden)
+  const seen = useRef<{ path: string; acc: number; since: number | null }>({ path: '', acc: 0, since: null });
+  const elapsed = () => {
+    const c = seen.current;
+    return Math.round((c.acc + (c.since != null ? Date.now() - c.since : 0)) / 1000);
+  };
   const hasPixels = !!(pixels.fb || pixels.tt || pixels.ga || pixels.gads || pixels.snap);
 
   // page views
@@ -104,8 +110,11 @@ export default function Tracker({ pixels }: { pixels: Pixels }) {
     if (window.self !== window.top) return; // admin preview frame
     ids.current ??= { vid: visitorId(), sid: sessionId() };
     const lines = cartStore.get();
+    const path = pathname + (search.toString() ? `?${search}` : '');
+    const prev = seen.current.path ? { path: seen.current.path, dur: elapsed() } : undefined;
+    seen.current = { path, acc: 0, since: document.hidden ? null : Date.now() };
     send({
-      type: 'view', ...ids.current, path: pathname + (search.toString() ? `?${search}` : ''), title: document.title,
+      type: 'view', ...ids.current, path, prev, title: document.title,
       ref: document.referrer, lang: document.documentElement.lang,
       utm: { source: search.get('utm_source'), medium: search.get('utm_medium'), campaign: search.get('utm_campaign') },
       cart: { items: cartCount(lines), value: cartTotal(lines) },
@@ -119,7 +128,7 @@ export default function Tracker({ pixels }: { pixels: Pixels }) {
     const ping = () => {
       if (document.hidden || !ids.current) return;
       const lines = cartStore.get();
-      send({ type: 'ping', ...ids.current, path: location.pathname + location.search, cart: { items: cartCount(lines), value: cartTotal(lines) } });
+      send({ type: 'ping', ...ids.current, path: seen.current.path || location.pathname + location.search, dur: elapsed(), cart: { items: cartCount(lines), value: cartTotal(lines) } });
     };
     const t = window.setInterval(ping, 15000);
     const onConsent = () => { if (hasPixels && consentGiven()) { loadPixels(pixels); pixelEvent('PageView'); } };
@@ -127,7 +136,12 @@ export default function Tracker({ pixels }: { pixels: Pixels }) {
       const d = (e as CustomEvent).detail as { name: 'AddToCart' | 'Purchase' | 'InitiateCheckout'; value?: number; ids?: number[] };
       if (hasPixels && (!pixels.consent || consentGiven())) pixelEvent(d.name, d);
     };
-    const onHide = () => { if (document.hidden && ids.current) send({ type: 'leave', ...ids.current }, true); };
+    const onHide = () => {
+      const c = seen.current;
+      if (!document.hidden) { c.since ??= Date.now(); return; }
+      if (c.since != null) { c.acc += Date.now() - c.since; c.since = null; }
+      if (ids.current) send({ type: 'leave', ...ids.current, path: c.path, dur: elapsed() }, true);
+    };
     window.addEventListener('bm:consent', onConsent);
     window.addEventListener('bm:event', onEvent);
     document.addEventListener('visibilitychange', onHide);

@@ -121,3 +121,93 @@ export async function campaignStats(days?: number) {
 }
 
 export const delta = (cur: number, prev: number) => (prev ? ((cur - prev) / prev) * 100 : cur ? 100 : 0);
+
+/* ---------- time on page, product views, visit journeys ---------- */
+
+export type PageTime = { path: string; views: number; visitors: number; avg: number; total: number };
+
+/** Views, unique visitors and time on screen per page (query string dropped), optionally under a path prefix. */
+export async function pageTimes(days: number, prefix = '/', take = 20): Promise<PageTime[]> {
+  const { from } = range(days);
+  const rows = await db.$queryRaw<PageTime[]>`
+    SELECT split_part(pv.path, '?', 1) AS path,
+           COUNT(*)::int AS views,
+           COUNT(DISTINCT v."visitorId")::int AS visitors,
+           COALESCE(AVG(NULLIF(pv.duration, 0)), 0)::float AS avg,
+           COALESCE(SUM(pv.duration), 0)::int AS total
+    FROM "PageView" pv JOIN "Visit" v ON v.id = pv."visitId"
+    WHERE pv.at >= ${from} AND pv.path LIKE ${prefix + '%'}
+    GROUP BY 1 ORDER BY views DESC, total DESC LIMIT ${take}`;
+  return rows;
+}
+
+const slugOf = (path: string) => {
+  const m = path.split('?')[0].match(/^\/product\/([^/]+)/);
+  if (!m) return null;
+  try { return decodeURIComponent(m[1]); } catch { return m[1]; }
+};
+
+export type ProductRef = { id: number; name: string; slug: string; image: string; price: number };
+
+/** Products behind a list of /product/<slug> paths, keyed by slug. */
+export async function productsByPath(paths: string[]) {
+  const slugs = [...new Set(paths.map(slugOf).filter((s): s is string => !!s))];
+  if (!slugs.length) return new Map<string, ProductRef>();
+  const rows = await db.product.findMany({ where: { slug: { in: slugs } }, select: { id: true, name: true, slug: true, images: true, price: true } });
+  return new Map(rows.map((p) => [p.slug, { id: p.id, name: p.name, slug: p.slug, price: p.price, image: parseJson<string[]>(p.images, [])[0] ?? '' }]));
+}
+export const productOf = (map: Map<string, ProductRef>, path: string) => { const s = slugOf(path); return s ? map.get(s) ?? null : null; };
+
+/** Most viewed product pages with their time on screen. */
+export async function productViews(days: number, take = 20) {
+  const rows = await pageTimes(days, '/product/', take);
+  const map = await productsByPath(rows.map((r) => r.path));
+  return rows.map((r) => ({ ...r, product: productOf(map, r.path) }));
+}
+
+/** Past visits (newest first) with time on site, products seen and returning-visitor counts. */
+export async function visitHistory(days: number, page: number, per: number, filter: { productsOnly?: boolean; ordered?: boolean } = {}) {
+  const { from } = range(days);
+  const where = {
+    startedAt: { gte: from },
+    ...(filter.productsOnly ? { views: { some: { path: { startsWith: '/product/' } } } } : {}),
+    ...(filter.ordered ? { ordered: true } : {}),
+  };
+  const [visits, total] = await Promise.all([
+    db.visit.findMany({
+      where, orderBy: { startedAt: 'desc' }, skip: (page - 1) * per, take: per,
+      include: { views: { select: { path: true, duration: true }, orderBy: { at: 'asc' } } },
+    }),
+    db.visit.count({ where }),
+  ]);
+  const returning = await db.visit.groupBy({ by: ['visitorId'], where: { visitorId: { in: [...new Set(visits.map((v) => v.visitorId))] } }, _count: { _all: true } });
+  const visitsOf = new Map(returning.map((r) => [r.visitorId, r._count._all]));
+  return {
+    total,
+    rows: visits.map((v) => {
+      const products = v.views.filter((x) => slugOf(x.path));
+      const onScreen = v.views.reduce((s, x) => s + x.duration, 0);
+      return {
+        id: v.id, startedAt: v.startedAt, lastSeen: v.lastSeen, landing: v.landing, source: v.source, campaign: v.campaign,
+        device: v.device, browser: v.browser, os: v.os, pageviews: v.pageviews, cartItems: v.cartItems, cartValue: v.cartValue, ordered: v.ordered,
+        // older visits have no per-page timing: fall back to first → last activity
+        seconds: onScreen || Math.max(0, Math.round((v.lastSeen.getTime() - v.startedAt.getTime()) / 1000)),
+        productViews: products.length,
+        productSeconds: products.reduce((s, x) => s + x.duration, 0),
+        visits: visitsOf.get(v.visitorId) ?? 1,
+      };
+    }),
+  };
+}
+
+/** One visit: every page in order with its time on screen, the products behind product pages and the visitor's other visits. */
+export async function visitJourney(id: string) {
+  const visit = await db.visit.findUnique({ where: { id }, include: { views: { orderBy: { at: 'asc' } } } });
+  if (!visit) return null;
+  const [map, others, order] = await Promise.all([
+    productsByPath(visit.views.map((v) => v.path)),
+    db.visit.findMany({ where: { visitorId: visit.visitorId, id: { not: id } }, orderBy: { startedAt: 'desc' }, take: 20, select: { id: true, startedAt: true, pageviews: true, source: true, ordered: true } }),
+    visit.ordered ? db.order.findFirst({ where: { visitorId: visit.visitorId, createdAt: { gte: visit.startedAt } }, orderBy: { createdAt: 'asc' }, select: { id: true, number: true, total: true } }) : null,
+  ]);
+  return { visit, steps: visit.views.map((v) => ({ ...v, product: productOf(map, v.path) })), others, order };
+}

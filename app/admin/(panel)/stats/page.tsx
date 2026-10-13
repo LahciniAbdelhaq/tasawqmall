@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { overview, topPages, campaignStats } from '@/lib/analytics';
+import { overview, topPages, campaignStats, pageTimes, productViews, type PageTime } from '@/lib/analytics';
 import { TimeChart, BarsChart, Donut } from '@/components/admin/Charts';
-import { BarList, Kpi, PageTitle, PeriodTabs, dh, pct } from '@/components/admin/bits';
+import { BarList, Kpi, PageTitle, PeriodTabs, dh, pct, dur } from '@/components/admin/bits';
 import { ORDER_STATUSES } from '@/lib/orders';
 
 export const metadata = { title: 'Statistiques' };
 
 export default async function StatsPage({ searchParams }: { searchParams: Promise<{ days?: string }> }) {
   const days = Math.min(365, Math.max(1, Number((await searchParams).days) || 30));
-  const [o, pages, camps] = await Promise.all([overview(days), topPages(days), campaignStats(days)]);
+  const [o, pages, camps, prods, cats, times] = await Promise.all([overview(days), topPages(days), campaignStats(days), productViews(days), pageTimes(days, '/product-category/', 15), pageTimes(days, '/', 25)]);
   const k = o.kpi;
   return (
     <>
@@ -94,6 +94,37 @@ export default async function StatsPage({ searchParams }: { searchParams: Promis
       </div>
 
       <div className="card" style={{ marginTop: 16 }}>
+        <div className="card-head"><h2>Produits les plus consultés</h2><span className="muted">temps passé sur la fiche produit</span></div>
+        <div className="table-wrap">
+          <table className="tbl">
+            <thead><tr><th>Produit</th><th className="num">Vues</th><th className="num">Visiteurs</th><th className="num">Temps moyen</th><th className="num">Temps total</th></tr></thead>
+            <tbody>
+              {prods.length === 0 && <tr><td colSpan={5} className="empty">Aucune fiche produit consultée sur cette période.</td></tr>}
+              {prods.map((r) => (
+                <tr key={r.path}>
+                  <td>
+                    {r.product ? (
+                      <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+                        {r.product.image && <img className="thumb" src={r.product.image} alt="" />}
+                        <div><Link className="row-link" href={`/admin/products/${r.product.id}`}>{r.product.name}</Link><div className="muted" style={{ fontSize: 12 }}>{decodeURIComponent(r.path)}</div></div>
+                      </div>
+                    ) : <span className="muted">{decodeURIComponent(r.path)}</span>}
+                  </td>
+                  <td className="num">{r.views}</td><td className="num">{r.visitors}</td>
+                  <td className="num">{r.avg ? dur(r.avg) : '—'}</td><td className="num">{r.total ? dur(r.total) : '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="cols-2" style={{ marginTop: 16 }}>
+        <TimeTable title="Catégories les plus consultées" rows={cats} empty="Aucune catégorie consultée sur cette période." />
+        <TimeTable title="Temps passé par page" rows={times} empty="Aucune page vue sur cette période." />
+      </div>
+
+      <div className="card" style={{ marginTop: 16 }}>
         <div className="card-head"><h2>Performance des annonces</h2><Link className="link" href="/admin/ads">Gérer</Link></div>
         <div className="table-wrap">
           <table className="tbl">
@@ -112,5 +143,28 @@ export default async function StatsPage({ searchParams }: { searchParams: Promis
         </div>
       </div>
     </>
+  );
+}
+
+function TimeTable({ title, rows, empty }: { title: string; rows: PageTime[]; empty: string }) {
+  return (
+    <div className="card">
+      <div className="card-head"><h2>{title}</h2></div>
+      <div className="table-wrap">
+        <table className="tbl">
+          <thead><tr><th>Page</th><th className="num">Vues</th><th className="num">Visiteurs</th><th className="num">Temps moyen</th></tr></thead>
+          <tbody>
+            {rows.length === 0 && <tr><td colSpan={4} className="empty">{empty}</td></tr>}
+            {rows.map((r) => (
+              <tr key={r.path}>
+                <td style={{ maxWidth: 320, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}><a className="row-link" href={r.path} target="_blank" rel="noreferrer">{decodeURIComponent(r.path)}</a></td>
+                <td className="num">{r.views}</td><td className="num">{r.visitors}</td>
+                <td className="num">{r.avg ? dur(r.avg) : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }

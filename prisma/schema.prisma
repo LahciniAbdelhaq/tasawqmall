@@ -1,0 +1,255 @@
+// BeautyMall — data model. JSON payloads are stored as text (portable SQLite <-> Postgres).
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         String   @default("admin") // admin | editor
+  createdAt    DateTime @default(now())
+  lastLoginAt  DateTime?
+}
+
+/// key/value settings (brand, theme, seo, languages, ads, menus, …) — value is JSON
+model Setting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id               Int      @id
+  slug             String   @unique
+  name             String
+  brand            String?
+  price            Float
+  regularPrice     Float
+  label            String?
+  images           String   @default("[]") // string[]
+  cats             String   @default("[]") // category paths
+  primaryCat       String?
+  tags             String   @default("[]")
+  inStock          Boolean  @default(true)
+  stockQty         Int?
+  sku              String?
+  ean              String?
+  shortDescription String?
+  description      String?
+  published        Boolean  @default(true)
+  position         Int      @default(0)
+  seoTitle         String?
+  seoDescription   String?
+  i18n             String   @default("{}") // { en: { name, shortDescription, description }, ar: … }
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model Category {
+  path           String   @id // "soins-du-visage/serums"
+  slug           String
+  name           String
+  parent         String?
+  image          String?
+  description    String?
+  seoTitle       String?
+  seoDescription String?
+  i18n           String   @default("{}")
+  position       Int      @default(0)
+}
+
+model Brand {
+  slug String  @id
+  name String
+  logo String?
+}
+
+model Customer {
+  id         Int      @id @default(autoincrement())
+  phone      String   @unique
+  firstName  String
+  lastName   String
+  email      String?
+  city       String?
+  address    String?
+  note       String?
+  blocked    Boolean  @default(false)
+  orders     Order[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Order {
+  id          Int       @id @default(autoincrement())
+  number      String    @unique
+  key         String
+  status      String    @default("pending") // pending | confirmed | shipped | delivered | cancelled | returned
+  customerId  Int?
+  customer    Customer? @relation(fields: [customerId], references: [id])
+  firstName   String
+  lastName    String
+  phone       String
+  email       String?
+  city        String
+  address     String
+  notes       String?
+  lines       String    // OrderLine[]
+  subtotal    Float
+  discount    Float     @default(0)
+  promoCode   String?
+  shipping    Float
+  total       Float
+  locale      String    @default("fr")
+  visitorId   String?
+  campaignId  Int?
+  source      String?   // utm_source / referrer host
+  history     String    @default("[]") // [{ at, status, by, note }]
+  adminNote   String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model PromoCode {
+  id          Int       @id @default(autoincrement())
+  code        String    @unique
+  type        String    @default("percent") // percent | fixed | freeship
+  value       Float     @default(0)
+  minSubtotal Float     @default(0)
+  maxUses     Int?
+  uses        Int       @default(0)
+  startsAt    DateTime?
+  endsAt      DateTime?
+  active      Boolean   @default(true)
+  description String?
+  createdAt   DateTime  @default(now())
+}
+
+/// builtin (imported Elementor) and custom pages
+model Page {
+  id             Int      @id @default(autoincrement())
+  slug           String   @unique // "" for home
+  title          String
+  kind           String   @default("custom") // builtin | custom
+  blocks         String   @default("[]")     // custom pages: Block[]
+  published      Boolean  @default(true)
+  seoTitle       String?
+  seoDescription String?
+  ogImage        String?
+  i18n           String   @default("{}")     // { en: { title, seoTitle, seoDescription } }
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+/// CMS edits applied on top of the imported HTML (per fragment, element key and language)
+model ContentOverride {
+  id        Int      @id @default(autoincrement())
+  fragment  String   // home | header | footer | tpl-product | <page slug> …
+  key       String   // data-bm id
+  locale    String   @default("fr")
+  kind      String   // text | html | src | alt | href | icon | hide | style
+  value     String
+  updatedAt DateTime @updatedAt
+
+  @@unique([fragment, key, locale, kind])
+  @@index([fragment, locale])
+}
+
+/// marketing campaigns ("Mes annonces") with their tracking link /l/<code>
+model Campaign {
+  id          Int       @id @default(autoincrement())
+  name        String
+  code        String    @unique
+  platform    String    @default("facebook") // facebook | instagram | tiktok | google | whatsapp | influencer | sms | other
+  destination String    @default("/")
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  budget      Float?
+  startsAt    DateTime?
+  endsAt      DateTime?
+  active      Boolean   @default(true)
+  notes       String?
+  createdAt   DateTime  @default(now())
+  clicks      Click[]
+}
+
+model Click {
+  id         Int      @id @default(autoincrement())
+  campaignId Int
+  campaign   Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  visitorId  String?
+  referrer   String?
+  device     String?
+  at         DateTime @default(now())
+
+  @@index([campaignId, at])
+}
+
+/// a browsing session (live visitors, traffic sources, conversion)
+model Visit {
+  id          String     @id // session id
+  visitorId   String
+  startedAt   DateTime   @default(now())
+  lastSeen    DateTime   @default(now())
+  landing     String
+  currentPath String
+  referrer    String?
+  source      String?    // utm_source or referrer host or "direct"
+  medium      String?
+  campaign    String?
+  campaignId  Int?
+  device      String?    // mobile | tablet | desktop
+  browser     String?
+  os          String?
+  lang        String?
+  pageviews   Int        @default(1)
+  cartItems   Int        @default(0)
+  cartValue   Float      @default(0)
+  ordered     Boolean    @default(false)
+  views       PageView[]
+
+  @@index([lastSeen])
+  @@index([startedAt])
+}
+
+model PageView {
+  id      Int      @id @default(autoincrement())
+  visitId String
+  visit   Visit    @relation(fields: [visitId], references: [id], onDelete: Cascade)
+  path    String
+  title   String?
+  at      DateTime @default(now())
+
+  @@index([at])
+  @@index([path])
+}
+
+/// site announcements: top bar, popup, banner
+model Announcement {
+  id        Int       @id @default(autoincrement())
+  type      String    @default("bar") // bar | popup
+  text      String
+  link      String?
+  image     String?
+  bgColor   String    @default("#65cbcb")
+  textColor String    @default("#ffffff")
+  animation String    @default("none") // none | scroll-rtl | scroll-ltr | slide-left | slide-right | pulse
+  speed     Int       @default(15)     // seconds per pass (scroll) or duration (slide)
+  pages     String    @default("*") // "*" or comma list of path prefixes
+  startsAt  DateTime?
+  endsAt    DateTime?
+  active    Boolean   @default(true)
+  i18n      String    @default("{}")
+  position  Int       @default(0)
+  createdAt DateTime  @default(now())
+}

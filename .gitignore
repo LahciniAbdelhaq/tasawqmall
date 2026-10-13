@@ -1,0 +1,9 @@
+node_modules
+.next
+next-env.d.ts
+*.tsbuildinfo
+data/orders.json
+.env
+prisma/dev.db*
+storage/
+.next-dev

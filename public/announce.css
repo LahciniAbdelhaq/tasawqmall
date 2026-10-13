@@ -1,0 +1,30 @@
+/* Announcement bars & popups (shop + back-office preview) */
+.bm-announce { position: relative; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 9px 44px; font-size: 14px; font-weight: 600; text-align: center; z-index: 30; }
+.bm-announce a { text-decoration: underline; }
+/* text area of a bar; animations are chosen per bar in the back-office */
+.bm-ann-track { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; }
+.bm-ann-item { position: relative; display: inline-block; }
+.bm-announce:hover .bm-ann-item { animation-play-state: paused; }
+/* continuous scrolling (left = 0 → 100% of the track, translate keeps the text fully outside) */
+.bm-anim-scroll-rtl .bm-ann-track, .bm-anim-scroll-ltr .bm-ann-track { text-align: left; direction: ltr; }
+.bm-anim-scroll-rtl .bm-ann-item { animation: bmScrollRtl var(--bm-speed, 15s) linear infinite; }
+.bm-anim-scroll-ltr .bm-ann-item { animation: bmScrollLtr var(--bm-speed, 15s) linear infinite; }
+@keyframes bmScrollRtl { from { left: 100%; transform: translateX(0); } to { left: 0; transform: translateX(-100%); } }
+@keyframes bmScrollLtr { from { left: 0; transform: translateX(-100%); } to { left: 100%; transform: translateX(0); } }
+/* one entrance, then the text stays */
+.bm-anim-slide-left .bm-ann-item { animation: bmSlideLeft min(var(--bm-speed, 1s), 3s) cubic-bezier(.22, 1, .36, 1) both; }
+.bm-anim-slide-right .bm-ann-item { animation: bmSlideRight min(var(--bm-speed, 1s), 3s) cubic-bezier(.22, 1, .36, 1) both; }
+@keyframes bmSlideLeft { from { transform: translateX(-120vw); } to { transform: none; } }
+@keyframes bmSlideRight { from { transform: translateX(120vw); } to { transform: none; } }
+/* soft attention pulse */
+.bm-anim-pulse .bm-ann-item { animation: bmPulse var(--bm-speed, 2s) ease-in-out infinite; }
+@keyframes bmPulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .7; transform: scale(1.04); } }
+@media (prefers-reduced-motion: reduce) { .bm-ann-item { animation: none !important; left: auto !important; transform: none !important; } }
+.bm-announce button { position: absolute; inset-inline-end: 12px; top: 50%; transform: translateY(-50%); background: none; border: 0; font-size: 20px; line-height: 1; cursor: pointer; padding: 4px; }
+.bm-popup-wrap { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 16px; background: rgba(0, 0, 0, .55); animation: bmFade .25s ease; }
+.bm-popup { position: relative; width: min(520px, 100%); max-height: 90vh; overflow: auto; background: #fff; border-radius: var(--wd-brd-radius, 10px); box-shadow: 0 20px 60px rgba(0, 0, 0, .3); }
+.bm-popup img { display: block; width: 100%; height: auto; }
+.bm-popup-text { padding: 16px 20px; font-weight: 600; text-align: center; }
+.bm-popup-close { position: absolute; top: 8px; inset-inline-end: 8px; width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .9); font-size: 22px; line-height: 1; cursor: pointer; z-index: 2; }
+@keyframes bmFade { from { opacity: 0; } to { opacity: 1; } }
+

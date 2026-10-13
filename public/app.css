@@ -1,0 +1,103 @@
+/*
+ * Small additions on top of the original theme CSS (site.css + inline.css):
+ *  - layout for the pages the static clone never had (cart, checkout, account, order)
+ *  - fixes for markup that relied on JavaScript sizing at clone time
+ */
+
+/* Smart Slider hero: slides were sized in px by its script; keep the original 1450×453 ratio */
+.n2-ss-slider .n2-ss-slider-1,
+.n2-ss-slider .n2-ss-slide { width: 100% !important; }
+.n2-ss-slider .n2-ss-slider-3 { position: relative; aspect-ratio: 1450 / 453; height: auto !important; }
+.n2-ss-slider .n2-ss-slide { position: absolute; inset: 0; height: 100% !important; }
+.n2-ss-slider .nextend-arrow { cursor: pointer; }
+
+/* carousels: hide navigation when everything fits */
+.wd-nav-arrows.wd-hide, .wd-nav-scroll.wd-hide { display: none !important; }
+
+/* cart */
+.bm-cart-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 30px; align-items: start; }
+.bm-cart .product-thumbnail img { width: 80px; height: auto; }
+.bm-cart .cart_totals { padding: 25px; background: var(--bgcolor-white, #fff); border-radius: var(--wd-brd-radius, 10px); box-shadow: 0 0 9px rgba(0, 0, 0, .06); }
+.bm-cart .cart_totals h2 { font-size: 22px; }
+.bm-cart .wc-proceed-to-checkout .button { width: 100%; }
+.bm-hint { display: block; color: var(--wd-text-color, #777); font-size: 12px; line-height: 1.4; margin-top: 4px; }
+.woocommerce-message { padding: 12px 18px; margin-bottom: 20px; border-radius: var(--wd-brd-radius, 10px); background: rgba(101, 203, 203, .12); color: #242424; }
+
+/* checkout */
+.bm-checkout-grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 40px; align-items: start; }
+.bm-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+.bm-order-review { padding: 25px; background: var(--bgcolor-white, #fff); border-radius: var(--wd-brd-radius, 10px); box-shadow: 0 0 9px rgba(0, 0, 0, .06); }
+.bm-checkout #place_order { width: 100%; }
+.bm-checkout .wc_payment_methods { list-style: none; padding: 0; margin: 15px 0; }
+.bm-checkout .payment_box { padding: 10px 15px; margin-top: 8px; background: rgba(0, 0, 0, .03); border-radius: 6px; font-size: 14px; }
+.woocommerce-error { list-style: none; padding: 12px 18px; margin: 0 0 20px; border-radius: var(--wd-brd-radius, 10px); background: #fdecea; color: #b42318; }
+
+/* main actions use the theme's accented button (same as "Ajouter au panier") */
+#place_order, .checkout-button, .woocommerce-mini-cart__buttons .checkout {
+  border-radius: var(--btn-accented-brd-radius); color: var(--btn-accented-color);
+  background-color: var(--btn-accented-bgcolor); box-shadow: var(--btn-accented-box-shadow);
+}
+#place_order:hover, .checkout-button:hover, .woocommerce-mini-cart__buttons .checkout:hover {
+  color: var(--btn-accented-color-hover); background-color: var(--btn-accented-bgcolor-hover);
+}
+#place_order:disabled { opacity: .6; cursor: wait; }
+
+/* order received / account */
+.woocommerce-order-overview { display: flex; flex-wrap: wrap; gap: 10px 30px; list-style: none; padding: 20px; margin: 20px 0; border: 2px dashed rgba(101, 203, 203, .5); border-radius: var(--wd-brd-radius, 10px); }
+.woocommerce-customer-details address { font-style: normal; line-height: 1.8; }
+
+/* wishlist remove link sits above the card */
+.wd-wishlist-product-actions { padding: 10px 15px 0; text-align: end; }
+
+@media (max-width: 1024px) {
+  .bm-cart-grid, .bm-checkout-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .bm-row-2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- back-office driven elements ---------- */
+
+/* icons replaced from the CMS */
+.bm-icon-custom::before { content: '' !important; display: inline-block; width: 1.2em; height: 1.2em; background: var(--bm-icon) center / contain no-repeat; vertical-align: middle; font-family: inherit !important; }
+img.bm-icon-img { width: 1.4em; height: 1.4em; object-fit: contain; vertical-align: middle; }
+.wd-nav-img { width: 18px; height: 18px; object-fit: contain; margin-inline-end: 6px; vertical-align: middle; }
+
+/* language switcher */
+.bm-lang-mobile { display: flex !important; flex-wrap: wrap; gap: 6px; padding: 12px 20px !important; }
+.bm-lang-mobile a { padding: 6px 10px !important; border: 1px solid rgba(0, 0, 0, .1); border-radius: 6px; min-height: 0 !important; }
+.bm-lang-mobile a.bm-on { border-color: var(--wd-primary-color); color: var(--wd-primary-color); }
+
+/* checkout promo code */
+.bm-promo { margin: 14px 0; }
+.bm-promo label { display: block; font-weight: 600; margin-bottom: 6px; color: var(--wd-title-color); }
+.bm-promo-row { display: flex; gap: 8px; }
+.bm-promo-row input { flex: 1; text-transform: uppercase; }
+.bm-promo-ok { color: #2f855a; } .bm-promo-err { color: #c53030; }
+.cart-discount td { color: #2f855a; }
+
+/* blocks of pages created in the back-office */
+.bm-blocks .bm-block { margin-bottom: 30px; }
+.bm-blocks .e-con-inner { width: 100%; flex-direction: column; }
+.bm-heading { margin: 0; }
+.bm-text { width: 100%; }
+.bm-banner { position: relative; display: flex; align-items: center; width: 100%; min-height: var(--bm-h); padding: 40px; overflow: hidden; border-radius: var(--wd-brd-radius, 10px); }
+.bm-banner-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.bm-banner::after { content: ''; position: absolute; inset: 0; background: #000; opacity: var(--bm-ov); }
+.bm-banner-body { position: relative; z-index: 1; max-width: 640px; }
+.bm-banner-title { color: inherit; font-size: clamp(26px, 4vw, 46px); margin-bottom: 10px; }
+.bm-banner-sub { font-size: 17px; margin-bottom: 20px; }
+.bm-btn { display: inline-flex; align-items: center; padding: 12px 26px; border-radius: var(--btn-accented-brd-radius, 5px); background: var(--btn-accented-bgcolor, var(--wd-primary-color)); color: var(--btn-accented-color, #fff) !important; font-weight: 600; text-decoration: none; }
+.bm-btn:hover { opacity: .9; }
+.bm-cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; width: 100%; }
+.bm-cat-tile { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; background: #fff; border-radius: var(--wd-brd-radius, 10px); text-align: center; text-decoration: none; box-shadow: 0 0 9px rgba(0, 0, 0, .05); }
+.bm-cat-img { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; background: #f4f4f4; }
+.bm-cat-img img { width: 100%; height: 100%; object-fit: cover; }
+.bm-cat-name { font-weight: 600; color: var(--wd-title-color); }
+.bm-cat-count { font-size: 12px; color: var(--wd-text-color); }
+.bm-faq { width: 100%; display: grid; gap: 10px; }
+.bm-faq-item { background: #fff; border-radius: var(--wd-brd-radius, 10px); padding: 14px 18px; box-shadow: 0 0 9px rgba(0, 0, 0, .05); }
+.bm-faq-item summary { cursor: pointer; font-weight: 600; color: var(--wd-title-color); }
+.bm-faq-a { padding-top: 10px; }
+.bm-video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--wd-brd-radius, 10px); overflow: hidden; background: #000; }
+.bm-video iframe, .bm-video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }

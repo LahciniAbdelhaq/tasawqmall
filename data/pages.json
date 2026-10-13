@@ -1,0 +1,950 @@
+{
+ "/cerave-boutique-officielle": {
+  "file": "cerave-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "CERAVE BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1058306 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1058306 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/dercos-boutique-officielle": {
+  "file": "dercos-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "DERCOS BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1058416 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1058416 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/eucerin-boutique-officielle": {
+  "file": "eucerin-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "EUCERIN BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1061827 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1061827 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/forcapil-boutique-officielle": {
+  "file": "forcapil-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "FORCAPIL BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-998338 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-998338 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/garnier-boutique-officielle": {
+  "file": "garnier-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "GARNIER BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1060170 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1060170 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/": {
+  "file": "index.html",
+  "kind": "home",
+  "title": "beautymall",
+  "description": "",
+  "bodyClass": "home wp-singular page-template-default page page-id-1070 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1070 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [
+   "div#n2-ss-2 .n2-ss-slider-1{display:grid;position:relative;}div#n2-ss-2 .n2-ss-slider-2{display:grid;position:relative;overflow:hidden;padding:0px 0px 0px 0px;border:0px solid RGBA(62,62,62,1);border-radius:0px;background-clip:padding-box;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;z-index:1;}div#n2-ss-2:not(.n2-ss-loaded) .n2-ss-slider-2{background-image:none !important;}div#n2-ss-2 .n2-ss-slider-3{display:grid;grid-template-areas:'cover';position:relative;overflow:hidden;z-index:10;}div#n2-ss-2 .n2-ss-slider-3 > *{grid-area:cover;}div#n2-ss-2 .n2-ss-slide-backgrounds,div#n2-ss-2 .n2-ss-slider-3 > .n2-ss-divider{position:relative;}div#n2-ss-2 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-2 .n2-ss-slide-backgrounds > *{overflow:hidden;}div#n2-ss-2 .n2-ss-slide-background{transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slider-4{place-self:center;position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-2 .n2-ss-slider-4 > *{grid-area:slide;}div#n2-ss-2.n2-ss-full-page--constrain-ratio .n2-ss-slider-4{height:auto;}div#n2-ss-2 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;z-index:20;-webkit-backface-visibility:hidden;transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slide{perspective:1500px;}div#n2-ss-2 .n2-ss-slide-active{z-index:21;}.n2-ss-background-animation{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;}div#n2-ss-2 .n2-ss-background-animation{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;}div#n2-ss-2 .n2-ss-background-animation .n2-ss-slide-background{z-index:auto;}div#n2-ss-2 .n2-bganim-side{position:absolute;left:0;top:0;overflow:hidden;background:RGBA(51,51,51,1);}div#n2-ss-2 .n2-bganim-tile-overlay-colored{z-index:100000;background:RGBA(51,51,51,1);}div#n2-ss-2 .nextend-arrow{cursor:pointer;overflow:hidden;line-height:0 !important;z-index:18;-webkit-user-select:none;}div#n2-ss-2 .nextend-arrow img{position:relative;display:block;}div#n2-ss-2 .nextend-arrow img.n2-arrow-hover-img{display:none;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-hover-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-hover-img{display:inline;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-normal-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-normal-img{display:none;}div#n2-ss-2 .nextend-arrow-animated{overflow:hidden;}div#n2-ss-2 .nextend-arrow-animated > div{position:relative;}div#n2-ss-2 .nextend-arrow-animated .n2-active{position:absolute;}div#n2-ss-2 .nextend-arrow-animated-fade{transition:background 0.3s, opacity 0.4s;}div#n2-ss-2 .nextend-arrow-animated-horizontal > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-horizontal .n2-active{top:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal .n2-active{left:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal .n2-active{right:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(100%);}div#n2-ss-2 .nextend-arrow-animated-vertical > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-vertical .n2-active{left:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical .n2-active{top:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical .n2-active{bottom:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(100%);}div#n2-ss-2 .n2-ss-slide-limiter{max-width:3000px;}div#n2-ss-2 .n-uc-n9r9xO3BoPIh{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-SQIJUqWTv5KH{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-s1MUSt6pkqDd{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-TR0fYFBoOaVY{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-pY78gR4yzBeI{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-yMWAqv1oCftu{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-jo6adLrVfE2r{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-ivICP1JB9FHj{padding:10px 10px 10px 10px}div#n2-ss-2 .n-uc-M541yFpsqQrw{padding:10px 0px 10px 10px}div#n2-ss-2 .nextend-arrow img{width: 32px}@media (min-width: 1200px){div#n2-ss-2 [data-hide-desktopportrait=\"1\"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-2 [data-hide-tabletportrait=\"1\"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-2 [data-hide-mobileportrait=\"1\"]{display: none !important;}div#n2-ss-2 .nextend-arrow img{width: 16px}}"
+  ]
+ },
+ "/la-roche-posay-boutique-officielle": {
+  "file": "la-roche-posay-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "LA ROCHE POSAY BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1058620 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1058620 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/loreal-paris-boutique-officielle": {
+  "file": "loreal-paris-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "L’OREAL PARIS BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1060622 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1060622 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/marques": {
+  "file": "marques.html",
+  "kind": "page",
+  "title": "marques – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1282 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1282 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/maybelline-boutique-officielle": {
+  "file": "maybelline-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "MAYBELLINE BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1060718 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1060718 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/mixa-boutique-officielle": {
+  "file": "mixa-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "MIXA BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1060426 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1060426 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/noreva-boutique-officielle": {
+  "file": "noreva-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "NOREVA BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1059760 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1059760 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/privacy-policy": {
+  "file": "privacy-policy.html",
+  "kind": "page",
+  "title": "POLITIQUE DE CONFIDENTIALITÉ – beautymall",
+  "description": "",
+  "bodyClass": "privacy-policy wp-singular page-template-default page page-id-3 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/product-category/best-seller": {
+  "file": "product-category_best-seller.html",
+  "kind": "category",
+  "title": "BEST SELLER – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-best-seller term-134 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "BEST SELLER",
+  "resultCount": "Affichage de 1–12 sur 104 résultatsTrié par popularité"
+ },
+ "/product-category/cremes-solaires-apres-soleil": {
+  "file": "product-category_cremes-solaires-apres-soleil.html",
+  "kind": "category",
+  "title": "Crèmes Solaires & Après Soleil – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cremes-solaires-apres-soleil term-234 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Crèmes Solaires & Après Soleil",
+  "resultCount": "Affichage de 1–12 sur 734 résultatsTrié par popularité"
+ },
+ "/product-category/cremes-solaires-apres-soleil/cremes-solaires-visage": {
+  "file": "product-category_cremes-solaires-apres-soleil_cremes-solaires-visage.html",
+  "kind": "category",
+  "title": "Crèmes Solaires Visage – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cremes-solaires-visage term-247 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Crèmes Solaires Visage",
+  "resultCount": "Affichage de 1–12 sur 488 résultatsTrié par popularité"
+ },
+ "/product-category/cremes-solaires-apres-soleil/cremes-solaires-visage/allergies-solaires-soins-traitement": {
+  "file": "product-category_cremes-solaires-apres-soleil_cremes-solaires-visage_allergies-solaires-soins-traitement.html",
+  "kind": "category",
+  "title": "Allergies Solaires : Soins & Traitement – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-allergies-solaires-soins-traitement term-248 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Allergies Solaires : Soins & Traitement",
+  "resultCount": "Affichage de 1–12 sur 64 résultatsTrié par popularité"
+ },
+ "/product-category/cremes-solaires-apres-soleil/cremes-solaires-visage/cremes-solaires-anti-acne": {
+  "file": "product-category_cremes-solaires-apres-soleil_cremes-solaires-visage_cremes-solaires-anti-acne.html",
+  "kind": "category",
+  "title": "Crèmes Solaires Anti-Acné – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cremes-solaires-anti-acne term-258 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Crèmes Solaires Anti-Acné",
+  "resultCount": "Affichage de 1–12 sur 30 résultatsTrié par popularité"
+ },
+ "/product-category/cremes-solaires-apres-soleil/cremes-solaires-visage/cremes-solaires-anti-taches": {
+  "file": "product-category_cremes-solaires-apres-soleil_cremes-solaires-visage_cremes-solaires-anti-taches.html",
+  "kind": "category",
+  "title": "Crèmes Solaires Anti-Taches – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cremes-solaires-anti-taches term-251 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Crèmes Solaires Anti-Taches",
+  "resultCount": "Affichage de 1–12 sur 42 résultatsTrié par popularité"
+ },
+ "/product-category/cremes-solaires-apres-soleil/cremes-solaires-visage/cremes-solaires-invisible-pour-peau-normale-grasse": {
+  "file": "product-category_cremes-solaires-apres-soleil_cremes-solaires-visage_cremes-solaires-invisible-pour-peau-normale-grasse.html",
+  "kind": "category",
+  "title": "Crèmes solaires Invisible pour Peau Normale / Grasse – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cremes-solaires-invisible-pour-peau-normale-grasse term-259 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Crèmes solaires Invisible pour Peau Normale / Grasse",
+  "resultCount": "Affichage de 1–12 sur 50 résultatsTrié par popularité"
+ },
+ "/product-category/cremes-solaires-apres-soleil/cremes-solaires-visage/cremes-solaires-invisible-tout-type-de-peau": {
+  "file": "product-category_cremes-solaires-apres-soleil_cremes-solaires-visage_cremes-solaires-invisible-tout-type-de-peau.html",
+  "kind": "category",
+  "title": "Crèmes Solaires Invisible – Tout Type de Peau – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cremes-solaires-invisible-tout-type-de-peau term-364 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Crèmes Solaires Invisible - Tout Type de Peau",
+  "resultCount": "Affichage de 1–12 sur 105 résultatsTrié par popularité"
+ },
+ "/product-category/k-beauty": {
+  "file": "product-category_k-beauty.html",
+  "kind": "category",
+  "title": "K-BEAUTY – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-k-beauty term-2387 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "K-BEAUTY",
+  "resultCount": "Affichage de 1–12 sur 118 résultatsTrié par popularité"
+ },
+ "/product-category/peaux-sensibles": {
+  "file": "product-category_peaux-sensibles.html",
+  "kind": "category",
+  "title": "Peaux sensibles – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-peaux-sensibles term-699 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Peaux sensibles",
+  "resultCount": "Affichage de 1–12 sur 13 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe": {
+  "file": "product-category_produits-pour-bebe.html",
+  "kind": "category",
+  "title": "Produits pour Bébé – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-produits-pour-bebe term-232 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Produits pour Bébé",
+  "resultCount": "Affichage de 1–12 sur 950 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/coffrets-bebe": {
+  "file": "product-category_produits-pour-bebe_coffrets-bebe.html",
+  "kind": "category",
+  "title": "Coffrets bébé – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-coffrets-bebe term-330 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Coffrets bébé",
+  "resultCount": "Affichage de 1–12 sur 16 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/couches": {
+  "file": "product-category_produits-pour-bebe_couches.html",
+  "kind": "category",
+  "title": "Couches – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-couches term-1234 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Couches",
+  "resultCount": "Affichage de 1–12 sur 45 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/hydratation-bebe": {
+  "file": "product-category_produits-pour-bebe_hydratation-bebe.html",
+  "kind": "category",
+  "title": "Hydratation bébé – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-hydratation-bebe term-240 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Hydratation bébé",
+  "resultCount": "Affichage de 1–12 sur 34 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/lingettes-bebe": {
+  "file": "product-category_produits-pour-bebe_lingettes-bebe.html",
+  "kind": "category",
+  "title": "Lingettes Bébé – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-lingettes-bebe term-396 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Lingettes Bébé",
+  "resultCount": "Affichage de 1–12 sur 20 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/produits-dallaitement": {
+  "file": "product-category_produits-pour-bebe_produits-dallaitement.html",
+  "kind": "category",
+  "title": "Produits d’Allaitement – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-produits-dallaitement term-324 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Produits d'Allaitement",
+  "resultCount": "Affichage de 1–12 sur 53 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/produits-dallaitement/coussinets-dallaitement": {
+  "file": "product-category_produits-pour-bebe_produits-dallaitement_coussinets-dallaitement.html",
+  "kind": "category",
+  "title": "Coussinets d’allaitement – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-coussinets-dallaitement term-325 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Coussinets d'allaitement",
+  "resultCount": "10 résultats affichésTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/produits-dallaitement/soins-mamelons": {
+  "file": "product-category_produits-pour-bebe_produits-dallaitement_soins-mamelons.html",
+  "kind": "category",
+  "title": "Soins Mamelons – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-mamelons term-397 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins Mamelons",
+  "resultCount": "7 résultats affichésTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/produits-dallaitement/tires-lait": {
+  "file": "product-category_produits-pour-bebe_produits-dallaitement_tires-lait.html",
+  "kind": "category",
+  "title": "Tires Lait – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-tires-lait term-398 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Tires Lait",
+  "resultCount": "Affichage de 1–12 sur 25 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/puericulture": {
+  "file": "product-category_produits-pour-bebe_puericulture.html",
+  "kind": "category",
+  "title": "Puériculture – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-puericulture term-297 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Puériculture",
+  "resultCount": "Affichage de 1–12 sur 450 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/puericulture/biberons-et-tetines": {
+  "file": "product-category_produits-pour-bebe_puericulture_biberons-et-tetines.html",
+  "kind": "category",
+  "title": "Biberons et tétines – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-biberons-et-tetines term-298 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Biberons et tétines",
+  "resultCount": "Affichage de 1–12 sur 188 résultatsTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/puericulture/sterilisateurs": {
+  "file": "product-category_produits-pour-bebe_puericulture_sterilisateurs.html",
+  "kind": "category",
+  "title": "Stérilisateurs – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-sterilisateurs term-331 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Stérilisateurs",
+  "resultCount": "7 résultats affichésTrié par popularité"
+ },
+ "/product-category/produits-pour-bebe/toilette-et-bain-bebe": {
+  "file": "product-category_produits-pour-bebe_toilette-et-bain-bebe.html",
+  "kind": "category",
+  "title": "Toilette et bain bébé – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-toilette-et-bain-bebe term-399 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Toilette et bain bébé",
+  "resultCount": "Affichage de 1–12 sur 72 résultatsTrié par popularité"
+ },
+ "/product-category/promotions": {
+  "file": "product-category_promotions.html",
+  "kind": "category",
+  "title": "PROMOTIONS – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-promotions term-1152 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "PROMOTIONS",
+  "resultCount": "Affichage de 1–12 sur 184 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre": {
+  "file": "product-category_sante-et-bien-etre.html",
+  "kind": "category",
+  "title": "Santé et Bien-être – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-sante-et-bien-etre term-242 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Santé et Bien-être",
+  "resultCount": "Affichage de 1–12 sur 2530 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre/complements-alimentaires-vitamines": {
+  "file": "product-category_sante-et-bien-etre_complements-alimentaires-vitamines.html",
+  "kind": "category",
+  "title": "Compléments alimentaires & Vitamines – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-complements-alimentaires-vitamines term-348 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Compléments alimentaires & Vitamines",
+  "resultCount": "Affichage de 1–12 sur 1284 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre/huiles-sante": {
+  "file": "product-category_sante-et-bien-etre_huiles-sante.html",
+  "kind": "category",
+  "title": "Huiles Santé – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-huiles-sante term-500 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Huiles Santé",
+  "resultCount": "Affichage de 1–12 sur 237 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre/materiel-medical-et-accessoires": {
+  "file": "product-category_sante-et-bien-etre_materiel-medical-et-accessoires.html",
+  "kind": "category",
+  "title": "Matériel médical et accessoires – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-materiel-medical-et-accessoires term-1228 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Matériel médical et accessoires",
+  "resultCount": "Affichage de 1–12 sur 528 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre/materiel-medical-et-accessoires/bandes-et-pansements": {
+  "file": "product-category_sante-et-bien-etre_materiel-medical-et-accessoires_bandes-et-pansements.html",
+  "kind": "category",
+  "title": "Bandes et pansements – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-bandes-et-pansements term-1342 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Bandes et pansements",
+  "resultCount": "Affichage de 1–12 sur 182 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre/materiel-medical-et-accessoires/muscles-et-articulations": {
+  "file": "product-category_sante-et-bien-etre_materiel-medical-et-accessoires_muscles-et-articulations.html",
+  "kind": "category",
+  "title": "Muscles et articulations – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-muscles-et-articulations term-1341 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Muscles et articulations",
+  "resultCount": "Affichage de 1–12 sur 46 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre/materiel-medical-et-accessoires/thermometres": {
+  "file": "product-category_sante-et-bien-etre_materiel-medical-et-accessoires_thermometres.html",
+  "kind": "category",
+  "title": "Thermomètres – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-thermometres term-1231 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Thermomètres",
+  "resultCount": "Affichage de 1–12 sur 13 résultatsTrié par popularité"
+ },
+ "/product-category/sante-et-bien-etre/parfums/parfums-hommes": {
+  "file": "product-category_sante-et-bien-etre_parfums_parfums-hommes.html",
+  "kind": "category",
+  "title": "Parfums Hommes – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-parfums-hommes term-1505 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Parfums Hommes",
+  "resultCount": "3 résultats affichésTrié par popularité"
+ },
+ "/product-category/soins-cheveux": {
+  "file": "product-category_soins-cheveux.html",
+  "kind": "category",
+  "title": "Soins Cheveux – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-cheveux term-83 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins Cheveux",
+  "resultCount": "Affichage de 1–12 sur 1669 résultatsTrié par popularité"
+ },
+ "/product-category/soins-cheveux/anti-poux-traitement-et-shampoings": {
+  "file": "product-category_soins-cheveux_anti-poux-traitement-et-shampoings.html",
+  "kind": "category",
+  "title": "Anti Poux : traitement et shampoings – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-anti-poux-traitement-et-shampoings term-1293 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Anti Poux : traitement et shampoings",
+  "resultCount": "Affichage de 1–12 sur 28 résultatsTrié par popularité"
+ },
+ "/product-category/soins-cheveux/apres-shampoing": {
+  "file": "product-category_soins-cheveux_apres-shampoing.html",
+  "kind": "category",
+  "title": "Après-Shampoing – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-apres-shampoing term-84 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Après-Shampoing",
+  "resultCount": "Affichage de 1–12 sur 130 résultatsTrié par popularité"
+ },
+ "/product-category/soins-cheveux/cheveux-gras": {
+  "file": "product-category_soins-cheveux_cheveux-gras.html",
+  "kind": "category",
+  "title": "Cheveux Gras – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cheveux-gras term-608 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Cheveux Gras",
+  "resultCount": "11 résultats affichésTrié par popularité"
+ },
+ "/product-category/soins-cheveux/cheveux-secs": {
+  "file": "product-category_soins-cheveux_cheveux-secs.html",
+  "kind": "category",
+  "title": "Cheveux Secs – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cheveux-secs term-351 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Cheveux Secs",
+  "resultCount": "Affichage de 1–12 sur 91 résultatsTrié par popularité"
+ },
+ "/product-category/soins-cheveux/chute-de-cheveux-produits-traitements": {
+  "file": "product-category_soins-cheveux_chute-de-cheveux-produits-traitements.html",
+  "kind": "category",
+  "title": "Chute de Cheveux : Produits & Traitements – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-chute-de-cheveux-produits-traitements term-85 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Chute de Cheveux : Produits & Traitements",
+  "resultCount": "Affichage de 1–12 sur 152 résultatsTrié par popularité"
+ },
+ "/product-category/soins-cheveux/shampoing-pour-bebe": {
+  "file": "product-category_soins-cheveux_shampoing-pour-bebe.html",
+  "kind": "category",
+  "title": "Shampoing pour Bébé – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-shampoing-pour-bebe term-412 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Shampoing pour Bébé",
+  "resultCount": "11 résultats affichésTrié par popularité"
+ },
+ "/product-category/soins-cheveux/soin-masque-gommage": {
+  "file": "product-category_soins-cheveux_soin-masque-gommage.html",
+  "kind": "category",
+  "title": "Soin & Masque & Gommage – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soin-masque-gommage term-352 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soin & Masque & Gommage",
+  "resultCount": "Affichage de 1–12 sur 120 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps": {
+  "file": "product-category_soins-du-corps.html",
+  "kind": "category",
+  "title": "Soins du Corps – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-du-corps term-145 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins du Corps",
+  "resultCount": "Affichage de 1–12 sur 1730 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps/brume-corps": {
+  "file": "product-category_soins-du-corps_brume-corps.html",
+  "kind": "category",
+  "title": "Brume Corps – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-brume-corps term-1742 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Brume Corps",
+  "resultCount": "Affichage de 1–12 sur 13 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps/deodorant": {
+  "file": "product-category_soins-du-corps_deodorant.html",
+  "kind": "category",
+  "title": "Déodorant – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-deodorant term-334 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Déodorant",
+  "resultCount": "Affichage de 1–12 sur 119 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps/hydratation-corps": {
+  "file": "product-category_soins-du-corps_hydratation-corps.html",
+  "kind": "category",
+  "title": "Hydratation Corps – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-hydratation-corps term-146 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Hydratation Corps",
+  "resultCount": "Affichage de 1–12 sur 372 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps/soin-mains": {
+  "file": "product-category_soins-du-corps_soin-mains.html",
+  "kind": "category",
+  "title": "Soin Mains – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soin-mains term-166 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soin Mains",
+  "resultCount": "Affichage de 1–12 sur 103 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps/soin-pieds": {
+  "file": "product-category_soins-du-corps_soin-pieds.html",
+  "kind": "category",
+  "title": "Soin Pieds – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soin-pieds term-198 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soin Pieds",
+  "resultCount": "Affichage de 1–12 sur 69 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps/soins-du-corps-pour-peau-sensible": {
+  "file": "product-category_soins-du-corps_soins-du-corps-pour-peau-sensible.html",
+  "kind": "category",
+  "title": "Soins du Corps pour Peau Sensible – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-du-corps-pour-peau-sensible term-492 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins du Corps pour Peau Sensible",
+  "resultCount": "Affichage de 1–12 sur 50 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-corps/toilette-intime": {
+  "file": "product-category_soins-du-corps_toilette-intime.html",
+  "kind": "category",
+  "title": "Toilette Intime – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-toilette-intime term-296 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Toilette Intime",
+  "resultCount": "Affichage de 1–12 sur 128 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage": {
+  "file": "product-category_soins-du-visage.html",
+  "kind": "category",
+  "title": "Soins du Visage – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-du-visage term-114 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins du Visage",
+  "resultCount": "Affichage de 1–12 sur 3439 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/demaquillant": {
+  "file": "product-category_soins-du-visage_demaquillant.html",
+  "kind": "category",
+  "title": "Démaquillant – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-demaquillant term-212 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Démaquillant",
+  "resultCount": "Affichage de 1–12 sur 170 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/hydratant-visage": {
+  "file": "product-category_soins-du-visage_hydratant-visage.html",
+  "kind": "category",
+  "title": "Hydratant Visage – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-hydratant-visage term-115 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Hydratant Visage",
+  "resultCount": "Affichage de 1–12 sur 789 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/nettoyant-visage": {
+  "file": "product-category_soins-du-visage_nettoyant-visage.html",
+  "kind": "category",
+  "title": "Nettoyant Visage – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-nettoyant-visage term-153 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Nettoyant Visage",
+  "resultCount": "Affichage de 1–12 sur 510 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/serums": {
+  "file": "product-category_soins-du-visage_serums.html",
+  "kind": "category",
+  "title": "Sérums – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-serums term-731 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Sérums",
+  "resultCount": "Affichage de 1–12 sur 264 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/soin-contour-des-yeux": {
+  "file": "product-category_soins-du-visage_soin-contour-des-yeux.html",
+  "kind": "category",
+  "title": "Soin Contour des Yeux – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soin-contour-des-yeux term-136 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soin Contour des Yeux",
+  "resultCount": "Affichage de 1–12 sur 189 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/soins-peau-grasse-anti-acneique": {
+  "file": "product-category_soins-du-visage_soins-peau-grasse-anti-acneique.html",
+  "kind": "category",
+  "title": "Soins Peau Grasse & Anti acnéique – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-peau-grasse-anti-acneique term-207 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins Peau Grasse & Anti acnéique",
+  "resultCount": "Affichage de 1–12 sur 298 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/soins-pour-peau-sensible-et-intolerante": {
+  "file": "product-category_soins-du-visage_soins-pour-peau-sensible-et-intolerante.html",
+  "kind": "category",
+  "title": "Soins pour Peau Sensible et Intolérante – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-pour-peau-sensible-et-intolerante term-256 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins pour Peau Sensible et Intolérante",
+  "resultCount": "Affichage de 1–12 sur 64 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/taches": {
+  "file": "product-category_soins-du-visage_taches.html",
+  "kind": "category",
+  "title": "Taches – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-taches term-246 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Taches",
+  "resultCount": "Affichage de 1–12 sur 324 résultatsTrié par popularité"
+ },
+ "/product-category/soins-du-visage/tonique-visage": {
+  "file": "product-category_soins-du-visage_tonique-visage.html",
+  "kind": "category",
+  "title": "Tonique Visage – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-tonique-visage term-289 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Tonique Visage",
+  "resultCount": "Affichage de 1–12 sur 58 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-hommes": {
+  "file": "product-category_soins-pour-hommes.html",
+  "kind": "category",
+  "title": "Soins pour Hommes – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-pour-hommes term-502 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins pour Hommes",
+  "resultCount": "Affichage de 1–12 sur 103 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-hommes/preservatifs-lubrifiants": {
+  "file": "product-category_soins-pour-hommes_preservatifs-lubrifiants.html",
+  "kind": "category",
+  "title": "Préservatifs & Lubrifiants – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-preservatifs-lubrifiants term-503 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Préservatifs & Lubrifiants",
+  "resultCount": "Affichage de 1–12 sur 51 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-hommes/soins-du-corps-pour-homme": {
+  "file": "product-category_soins-pour-hommes_soins-du-corps-pour-homme.html",
+  "kind": "category",
+  "title": "Soins du Corps pour Homme – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-du-corps-pour-homme term-627 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins du Corps pour Homme",
+  "resultCount": "Affichage de 1–12 sur 27 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-hommes/soins-du-corps-pour-homme/deodorants-pour-homme": {
+  "file": "product-category_soins-pour-hommes_soins-du-corps-pour-homme_deodorants-pour-homme.html",
+  "kind": "category",
+  "title": "Déodorants pour Homme – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-deodorants-pour-homme term-628 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Déodorants pour Homme",
+  "resultCount": "Affichage de 1–12 sur 15 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-hommes/soins-du-corps-pour-homme/hygiene-pour-homme": {
+  "file": "product-category_soins-pour-hommes_soins-du-corps-pour-homme_hygiene-pour-homme.html",
+  "kind": "category",
+  "title": "Hygiène pour Homme – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-hygiene-pour-homme term-1384 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Hygiène pour Homme",
+  "resultCount": "5 résultats affichésTrié par popularité"
+ },
+ "/product-category/soins-pour-hommes/soins-visage-homme": {
+  "file": "product-category_soins-pour-hommes_soins-visage-homme.html",
+  "kind": "category",
+  "title": "Soins Visage Homme – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-visage-homme term-652 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins Visage Homme",
+  "resultCount": "Affichage de 1–12 sur 20 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-peau-abimee": {
+  "file": "product-category_soins-pour-peau-abimee.html",
+  "kind": "category",
+  "title": "Soins pour Peau abîmée – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-pour-peau-abimee term-220 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins pour Peau abîmée",
+  "resultCount": "Affichage de 1–12 sur 250 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-peau-abimee/cremes-pour-rougeurs-et-erytheme-fessier": {
+  "file": "product-category_soins-pour-peau-abimee_cremes-pour-rougeurs-et-erytheme-fessier.html",
+  "kind": "category",
+  "title": "Crèmes pour Rougeurs et Erythème Fessier – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-cremes-pour-rougeurs-et-erytheme-fessier term-303 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Crèmes pour Rougeurs et Erythème Fessier",
+  "resultCount": "Affichage de 1–12 sur 63 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-peau-abimee/reparation-pieds": {
+  "file": "product-category_soins-pour-peau-abimee_reparation-pieds.html",
+  "kind": "category",
+  "title": "Réparation Pieds – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-reparation-pieds term-295 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Réparation Pieds",
+  "resultCount": "Affichage de 1–12 sur 31 résultatsTrié par popularité"
+ },
+ "/product-category/soins-pour-peau-abimee/soins-cremes-pour-cicatrices-et-brulures": {
+  "file": "product-category_soins-pour-peau-abimee_soins-cremes-pour-cicatrices-et-brulures.html",
+  "kind": "category",
+  "title": "Soins & Crèmes pour Cicatrices et Brûlures – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-soins-cremes-pour-cicatrices-et-brulures term-221 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Soins & Crèmes pour Cicatrices et Brûlures",
+  "resultCount": "Affichage de 1–12 sur 95 résultatsTrié par popularité"
+ },
+ "/product-category/tensiometre": {
+  "file": "product-category_tensiometre.html",
+  "kind": "category",
+  "title": "Tensiometre – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_cat term-tensiometre term-1599 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Tensiometre",
+  "resultCount": "4 résultats affichésTrié par popularité"
+ },
+ "/product-tag/beauty-promotion": {
+  "file": "product-tag_beauty-promotion.html",
+  "kind": "tag",
+  "title": "Beauty Promotion – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_tag term-beauty-promotion term-4417 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "Beauty Promotion",
+  "resultCount": "Affichage de 1–12 sur 289 résultatsTrié par popularité"
+ },
+ "/product-tag/destockage": {
+  "file": "product-tag_destockage.html",
+  "kind": "tag",
+  "title": "DESTOCKAGE – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_tag term-destockage term-4588 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "DESTOCKAGE",
+  "resultCount": "Affichage de 1–12 sur 100 résultatsTrié par popularité"
+ },
+ "/product-tag/la-roche-posay-festival": {
+  "file": "product-tag_la-roche-posay-festival.html",
+  "kind": "tag",
+  "title": "LA ROCHE POSAY FESTIVAL – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_tag term-la-roche-posay-festival term-4621 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "LA ROCHE POSAY FESTIVAL",
+  "resultCount": "11 résultats affichésTrié par popularité"
+ },
+ "/product-tag/SUMMER-ESSENTIALS": {
+  "file": "product-tag_SUMMER-ESSENTIALS.html",
+  "kind": "tag",
+  "title": "SUMMER ESSENTIALS – beautymall",
+  "description": "",
+  "bodyClass": "archive tax-product_tag term-summer-essentials term-4582 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-archive-shop woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": [],
+  "heading": "SUMMER ESSENTIALS",
+  "resultCount": "9 résultats affichésTrié par popularité"
+ },
+ "/product/heliocare-360-pigment-solution-fluide-spf50-50ml": {
+  "file": "product_heliocare-360-pigment-solution-fluide-spf50-50ml.html",
+  "kind": "product",
+  "title": "Heliocare 360° Pigment solution Fluide spf50+ 50ml – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-12907 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-anthelios-fluide-anti-taches-spf50-50mlmela-b3-miniature-pack": {
+  "file": "product_la-roche-posay-anthelios-fluide-anti-taches-spf50-50mlmela-b3-miniature-pack.html",
+  "kind": "product",
+  "title": "La Roche Posay Anthelios Fluide Anti-Taches spf50+ 50ml+Mela B3 Pack – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-375933 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-anthelios-uvmune-400-creme-fondante-solaire-spf50-peau-sensible-normales-a-seches-50ml": {
+  "file": "product_la-roche-posay-anthelios-uvmune-400-creme-fondante-solaire-spf50-peau-sensible-normales-a-seches-50ml.html",
+  "kind": "product",
+  "title": "La Roche Posay ANTHELIOS UVMUNE 400 CRÈME FONDANTE SOLAIRE SPF50+ | Peau sensible normales à sèches |50ml = Mini Hyalu B5 OFFERT – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-5946 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-anthelios-uvmune-400-creme-solaire-fluide-invisible-peaux-sensibles-50ml": {
+  "file": "product_la-roche-posay-anthelios-uvmune-400-creme-solaire-fluide-invisible-peaux-sensibles-50ml.html",
+  "kind": "product",
+  "title": "La Roche Posay Anthelios Shaka Fluide UVMUNE 400+ spf50 = Mini Vitamin C12 OFFERT – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-6093 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-anthelios-uvmune400-oil-control-invisible-spf50-peau-mixte-a-grasse-acneique-50ml-effaclar-gel-miniture-offert": {
+  "file": "product_la-roche-posay-anthelios-uvmune400-oil-control-invisible-spf50-peau-mixte-a-grasse-acneique-50ml-effaclar-gel-miniture-offert.html",
+  "kind": "product",
+  "title": "La Roche-Posay Anthelios UVMUNE400 Oil Control Invisible SPF50+ Peau Mixte à Grasse Acnéique | 50ml = Mini Hyalu B5 OFFERT – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-6089 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-cicaplast-baume-cicatrisant-b5-peau-fragilisee-100ml-eau-thermal-offerte": {
+  "file": "product_la-roche-posay-cicaplast-baume-cicatrisant-b5-peau-fragilisee-100ml-eau-thermal-offerte.html",
+  "kind": "product",
+  "title": "LA ROCHE POSAY CICAPLAST BAUME B5 100 ML = Shaka Fluide UVMUNE 400+ SPF50 15ML OFFERTE – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-6305 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-effaclar-duom-40ml-anti-imperfections-gel-moussant-50ml-offert": {
+  "file": "product_la-roche-posay-effaclar-duom-40ml-anti-imperfections-gel-moussant-50ml-offert.html",
+  "kind": "product",
+  "title": "La Roche-Posay Effaclar Duo+M 40ml Anti-Imperfections = Gel Moussant 50ml OFFERT – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-1088442 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-effaclar-gel-moussant-peau-grasse-acneique-200ml": {
+  "file": "product_la-roche-posay-effaclar-gel-moussant-peau-grasse-acneique-200ml.html",
+  "kind": "product",
+  "title": "La Roche-Posay Effaclar Gel Moussant Peau Grasse Acnéique | 200ml – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-6172 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-effaclar-gel-moussant-peau-grasse-acneique-400ml-serviette-effaclar-gel-miniatures": {
+  "file": "product_la-roche-posay-effaclar-gel-moussant-peau-grasse-acneique-400ml-serviette-effaclar-gel-miniatures.html",
+  "kind": "product",
+  "title": "La Roche-Posay Effaclar Gel Moussant Peau Grasse Acnéique | 400ml = GEL MOUSSANT 50ML OFFERT – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-6087 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-mela-b3-serum-concentre-intensif-anti-taches-anti-recidive-trousse-eau-thermal-miniatures-offertes": {
+  "file": "product_la-roche-posay-mela-b3-serum-concentre-intensif-anti-taches-anti-recidive-trousse-eau-thermal-miniatures-offertes.html",
+  "kind": "product",
+  "title": "LA ROCHE POSAY MELA B3 SÉRUM CONCENTRÉ INTENSIF ANTI-TACHES ANTI-RÉCIDIVE = MELA B3 SÉRUM 10 ML OFFERT – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-32751 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-pure-vitamine-c12-serum-30ml": {
+  "file": "product_la-roche-posay-pure-vitamine-c12-serum-30ml.html",
+  "kind": "product",
+  "title": "La Roche Posay Pure Vitamine C12 Serum 30ml = Mini Vitamin C12 10ml Offerte – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-40546 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/product/la-roche-posay-toleriane-sensitive-creme-hydratante-apaisante-peau-sensible-40ml": {
+  "file": "product_la-roche-posay-toleriane-sensitive-creme-hydratante-apaisante-peau-sensible-40ml.html",
+  "kind": "product",
+  "title": "La Roche-Posay Toleriane Sensitive Crème Hydratante Apaisante Peau Sensible | 40ml = Mini Hyalu B5 OFFERT – beautymallAvantages",
+  "description": "",
+  "bodyClass": "wp-singular product-template-default single single-product postid-5216 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce woocommerce-page woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on wd-sticky-btn-on wd-sticky-btn-on-mb elementor-default elementor-kit-12",
+  "styles": []
+ },
+ "/vichy-boutique-officielle": {
+  "file": "vichy-boutique-officielle.html",
+  "kind": "boutique",
+  "title": "VICHY BOUTIQUE OFFICIELLE – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-1058544 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-1058544 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ },
+ "/wishlist": {
+  "file": "wishlist.html",
+  "kind": "wishlist",
+  "title": "Liste de souhaits – beautymall",
+  "description": "",
+  "bodyClass": "wp-singular page-template-default page page-id-25 wp-theme-woodmart wp-child-theme-woodmart-child theme-woodmart woocommerce-js wrapper-custom categories-accordion-on woodmart-ajax-shop-on sticky-toolbar-on elementor-default elementor-kit-12 elementor-page elementor-page-25 cht-in-desktop cht-landscape e--ua-blink e--ua-chrome e--ua-webkit",
+  "styles": []
+ }
+}

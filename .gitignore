@@ -7,3 +7,5 @@ data/orders.json
 prisma/dev.db*
 storage/
 .next-dev
+.next-*
+.vercel

@@ -11,10 +11,13 @@
     "db:push": "prisma db push",
     "db:seed": "node prisma/seed.mjs",
     "setup": "prisma db push && node prisma/seed.mjs",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && prisma db push --skip-generate && node prisma/seed.mjs && next build",
+    "db:import-sqlite": "node scripts/sqlite-to-postgres.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",
+    "@vercel/blob": "^2.8.1",
     "bcryptjs": "^3.0.3",
     "jose": "^6.2.12",
     "next": "15.5.27",

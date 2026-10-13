@@ -46,7 +46,7 @@ export function CompressButton({ count }: { count: number }) {
     let left = count, saved = 0, done = 0;
     while (left > 0) {
       const r = await compressImages(20);
-      if (!r?.ok) break;
+      if (!r?.ok) { setState({ busy: false, done, saved, left, msg: r?.message || 'Échec de la compression.' }); return; }
       saved += r.saved || 0; done += 20; left = r.remaining ?? 0;
       setState({ busy: true, done, saved, left, msg: '' });
     }

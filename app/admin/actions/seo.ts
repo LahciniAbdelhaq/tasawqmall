@@ -93,6 +93,8 @@ export async function fixSeo(kind: 'meta' | 'title' | 'alt' | 'catdesc'): Promis
  */
 export async function compressImages(batch = 25): Promise<Result & { remaining?: number; saved?: number }> {
   await requireAdmin();
+  // on Vercel the site files are read-only: compress locally, then commit and push
+  if (process.env.VERCEL) return { ok: false, message: 'Sur Vercel les fichiers du site sont en lecture seule : lancez la compression en local (npm run dev), puis poussez les images sur GitHub.' };
   const sharp = (await import('sharp')).default;
   const backup = path.join(process.cwd(), 'storage', 'originals');
   const done = path.join(process.cwd(), 'storage', 'compressed.json');

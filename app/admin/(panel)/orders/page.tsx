@@ -15,7 +15,7 @@ export default async function OrdersPage({ searchParams }: { searchParams: Promi
   const page = Math.max(1, Number(sp.page) || 1);
   const where: Prisma.OrderWhereInput = {
     ...(status ? { status } : {}),
-    ...(q ? { OR: [{ number: { contains: q } }, { phone: { contains: q } }, { firstName: { contains: q } }, { lastName: { contains: q } }, { city: { contains: q } }] } : {}),
+    ...(q ? { OR: [{ number: { contains: q, mode: 'insensitive' } }, { phone: { contains: q, mode: 'insensitive' } }, { firstName: { contains: q, mode: 'insensitive' } }, { lastName: { contains: q, mode: 'insensitive' } }, { city: { contains: q, mode: 'insensitive' } }] } : {}),
   };
   const [orders, total, counts] = await Promise.all([
     db.order.findMany({ where, orderBy: { createdAt: 'desc' }, skip: (page - 1) * PER, take: PER }),

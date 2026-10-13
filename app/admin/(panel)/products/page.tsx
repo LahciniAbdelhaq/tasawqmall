@@ -14,7 +14,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: Pro
   const q = (sp.q || '').trim();
   const page = Math.max(1, Number(sp.page) || 1);
   const where: Prisma.ProductWhereInput = {
-    ...(q ? { OR: [{ name: { contains: q } }, { sku: { contains: q } }, { ean: { contains: q } }, { slug: { contains: q } }] } : {}),
+    ...(q ? { OR: [{ name: { contains: q, mode: 'insensitive' } }, { sku: { contains: q, mode: 'insensitive' } }, { ean: { contains: q, mode: 'insensitive' } }, { slug: { contains: q, mode: 'insensitive' } }] } : {}),
     ...(sp.cat ? { cats: { contains: `"${sp.cat}"` } } : {}),
     ...(sp.brand ? { brand: sp.brand } : {}),
     ...(sp.stock === 'out' ? { inStock: false } : sp.stock === 'in' ? { inStock: true } : {}),

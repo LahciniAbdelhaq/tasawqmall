@@ -1,11 +1,12 @@
-// BeautyMall — data model. JSON payloads are stored as text (portable SQLite <-> Postgres).
+// BeautyMall — data model (PostgreSQL: Vercel Postgres / Neon / Supabase). JSON payloads are stored as text.
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL") // pooled connection (the app)
+  directUrl = env("DATABASE_URL_UNPOOLED") // direct connection (creating tables)
 }
 
 model AdminUser {

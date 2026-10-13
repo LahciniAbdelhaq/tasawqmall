@@ -10,7 +10,7 @@ export default async function CustomersPage({ searchParams }: { searchParams: Pr
   const sp = await searchParams;
   const q = (sp.q || '').trim();
   const customers = await db.customer.findMany({
-    where: q ? { OR: [{ phone: { contains: q } }, { firstName: { contains: q } }, { lastName: { contains: q } }, { city: { contains: q } }, { email: { contains: q } }] } : undefined,
+    where: q ? { OR: [{ phone: { contains: q, mode: 'insensitive' } }, { firstName: { contains: q, mode: 'insensitive' } }, { lastName: { contains: q, mode: 'insensitive' } }, { city: { contains: q, mode: 'insensitive' } }, { email: { contains: q, mode: 'insensitive' } }] } : undefined,
     include: { orders: { select: { total: true, status: true, createdAt: true } } },
     orderBy: { createdAt: 'desc' },
     take: 500,

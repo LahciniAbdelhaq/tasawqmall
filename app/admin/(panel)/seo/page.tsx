@@ -112,7 +112,7 @@ function Tools({ siteUrl }: { siteUrl: string }) {
         <div className="card">
           <div className="card-head"><h2>Images lourdes ({heavy.length})</h2><span className="muted">{(total / 1048576).toFixed(1)} Mo</span></div>
           <div className="card-body">
-            <p className="muted" style={{ marginTop: 0 }}>Les images de plus de 300 Ko ralentissent le site (critère Google « Core Web Vitals »). La compression garde la même adresse et une copie de l’original dans <code>storage/originals</code>.</p>
+            <p className="muted" style={{ marginTop: 0 }}>Les images de plus de 300 Ko ralentissent le site (critère Google « Core Web Vitals »). La compression garde la même adresse et une copie de l’original dans <code>storage/originals</code>. Sur Vercel, lancez-la en local puis poussez les images.</p>
             <CompressButton count={heavy.length} />
             <div style={{ marginTop: 14, maxHeight: 360, overflowY: 'auto' }}>
               {heavy.slice(0, 60).map((h) => (

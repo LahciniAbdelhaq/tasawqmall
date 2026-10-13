@@ -54,7 +54,11 @@ async function History({ sp }: { sp: SP }) {
             {rows.length === 0 && <tr><td colSpan={9} className="empty">Aucune visite sur cette période.</td></tr>}
             {rows.map((v) => (
               <tr key={v.id}>
-                <td className="muted">{fmtDate(v.startedAt)}{v.visits > 1 && <div><span className="pill plain">Revenu · {v.visits} visites</span></div>}</td>
+                <td className="muted">
+                  {fmtDate(v.startedAt)}
+                  {v.customer && <div><Link className="row-link" href={`/admin/customers/${v.customer.id}`}>{v.customer.name}</Link></div>}
+                  {v.visits > 1 && <div><Link href={`/admin/live/visitor/${encodeURIComponent(v.visitorId)}`}><span className="pill plain">Revenu · {v.visits} visites</span></Link></div>}
+                </td>
                 <td style={{ maxWidth: 260, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{decodeURIComponent(v.landing.split('?')[0])}</td>
                 <td>{v.source || 'direct'}{v.campaign && <div className="muted" style={{ fontSize: 12 }}>{v.campaign}</div>}</td>
                 <td><Icon name={v.device === 'mobile' ? 'smartphone' : 'monitor'} size={15} /> {v.browser} · {v.os}</td>

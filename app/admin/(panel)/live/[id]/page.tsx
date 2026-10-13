@@ -12,7 +12,7 @@ const time = (d: Date) => d.toLocaleTimeString('fr-FR', { hour: '2-digit', minut
 export default async function VisitPage({ params }: { params: Promise<{ id: string }> }) {
   const j = await visitJourney((await params).id);
   if (!j) notFound();
-  const { visit: v, steps, others, order } = j;
+  const { visit: v, steps, others, order, customer } = j;
   const live = Date.now() - v.lastSeen.getTime() < 60_000;
   const onScreen = steps.reduce((s, x) => s + x.duration, 0);
   const products = steps.filter((s) => s.product);
@@ -20,6 +20,7 @@ export default async function VisitPage({ params }: { params: Promise<{ id: stri
   return (
     <>
       <PageTitle title="Parcours du visiteur" sub={<>Visite du {fmtDate(v.startedAt)}{live && <> · <span className="live-dot" /> en ligne</>}</>}>
+        <Link className="btn btn-secondary btn-sm" href={`/admin/live/visitor/${encodeURIComponent(v.visitorId)}`}>Toutes ses visites</Link>
         <Link className="btn btn-secondary btn-sm" href="/admin/live?tab=history&days=30">← Historique</Link>
       </PageTitle>
 
@@ -73,6 +74,9 @@ export default async function VisitPage({ params }: { params: Promise<{ id: stri
           <div className="card">
             <div className="card-head"><h2>Visiteur</h2></div>
             <div className="card-body" style={{ display: 'grid', gap: 6, fontSize: 14 }}>
+              {customer
+                ? <div>Client : <Link className="row-link" href={`/admin/customers/${customer.id}`}>{customer.name}</Link> <span className="muted">· {customer.phone}</span></div>
+                : <div className="muted">Visiteur anonyme (pas encore de commande)</div>}
               <div><Icon name={v.device === 'mobile' ? 'smartphone' : 'monitor'} size={15} /> {v.device} · {v.browser} · {v.os}{v.lang && ` · ${v.lang}`}</div>
               <div>Source : <strong>{v.source || 'direct'}</strong>{v.medium && ` / ${v.medium}`}{v.campaign && ` · ${v.campaign}`}</div>
               {v.referrer && <div className="muted" style={{ wordBreak: 'break-all' }}>Vient de : {v.referrer}</div>}
@@ -81,7 +85,7 @@ export default async function VisitPage({ params }: { params: Promise<{ id: stri
             </div>
           </div>
           <div className="card">
-            <div className="card-head"><h2>Autres visites</h2><span className="muted">même navigateur</span></div>
+            <div className="card-head"><h2>Autres visites</h2><Link className="link" href={`/admin/live/visitor/${encodeURIComponent(v.visitorId)}`}>Tout l’historique →</Link></div>
             <div className="card-body" style={{ display: 'grid', gap: 8, fontSize: 14 }}>
               {others.length === 0 && <div className="muted">Première visite.</div>}
               {others.map((o) => (

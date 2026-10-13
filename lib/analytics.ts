@@ -182,13 +182,15 @@ export async function visitHistory(days: number, page: number, per: number, filt
   ]);
   const returning = await db.visit.groupBy({ by: ['visitorId'], where: { visitorId: { in: [...new Set(visits.map((v) => v.visitorId))] } }, _count: { _all: true } });
   const visitsOf = new Map(returning.map((r) => [r.visitorId, r._count._all]));
+  const customers = await customersByVisitor(visits.map((v) => v.visitorId));
   return {
     total,
     rows: visits.map((v) => {
       const products = v.views.filter((x) => slugOf(x.path));
       const onScreen = v.views.reduce((s, x) => s + x.duration, 0);
       return {
-        id: v.id, startedAt: v.startedAt, lastSeen: v.lastSeen, landing: v.landing, source: v.source, campaign: v.campaign,
+        id: v.id, visitorId: v.visitorId, customer: customers.get(v.visitorId) ?? null,
+        startedAt: v.startedAt, lastSeen: v.lastSeen, landing: v.landing, source: v.source, campaign: v.campaign,
         device: v.device, browser: v.browser, os: v.os, pageviews: v.pageviews, cartItems: v.cartItems, cartValue: v.cartValue, ordered: v.ordered,
         // older visits have no per-page timing: fall back to first → last activity
         seconds: onScreen || Math.max(0, Math.round((v.lastSeen.getTime() - v.startedAt.getTime()) / 1000)),
@@ -209,5 +211,103 @@ export async function visitJourney(id: string) {
     db.visit.findMany({ where: { visitorId: visit.visitorId, id: { not: id } }, orderBy: { startedAt: 'desc' }, take: 20, select: { id: true, startedAt: true, pageviews: true, source: true, ordered: true } }),
     visit.ordered ? db.order.findFirst({ where: { visitorId: visit.visitorId, createdAt: { gte: visit.startedAt } }, orderBy: { createdAt: 'asc' }, select: { id: true, number: true, total: true } }) : null,
   ]);
-  return { visit, steps: visit.views.map((v) => ({ ...v, product: productOf(map, v.path) })), others, order };
+  const customer = (await customersByVisitor([visit.visitorId])).get(visit.visitorId) ?? null;
+  return { visit, steps: visit.views.map((v) => ({ ...v, product: productOf(map, v.path) })), others, order, customer };
+}
+
+/* ---------- product clicks, visitor profiles ---------- */
+
+const productPathVariants = (slug: string) => {
+  const forms = [...new Set([slug, encodeURIComponent(slug)])];
+  return forms.flatMap((f) => [{ path: `/product/${f}` }, { path: { startsWith: `/product/${f}?` } }, { path: { startsWith: `/product/${f}/` } }]);
+};
+
+export type ProductCount = { views: number; visitors: number; avg: number };
+
+/** Product page views ("clicks"), unique visitors and average time per product slug since `days` ago (0 = all time). */
+export async function productCounts(slugs: string[], days: number) {
+  const out = new Map<string, ProductCount>();
+  if (!slugs.length) return out;
+  const keys = [...new Set(slugs.flatMap((s) => [s, encodeURIComponent(s)]))];
+  const from = days ? range(days).from : new Date(0);
+  const rows = await db.$queryRaw<(ProductCount & { slug: string })[]>`
+    SELECT split_part(split_part(pv.path, '?', 1), '/', 3) AS slug,
+           COUNT(*)::int AS views,
+           COUNT(DISTINCT v."visitorId")::int AS visitors,
+           COALESCE(AVG(NULLIF(pv.duration, 0)), 0)::float AS avg
+    FROM "PageView" pv JOIN "Visit" v ON v.id = pv."visitId"
+    WHERE pv.at >= ${from} AND pv.path LIKE '/product/%'
+      AND split_part(split_part(pv.path, '?', 1), '/', 3) = ANY(${keys})
+    GROUP BY 1`;
+  for (const r of rows) {
+    let slug = r.slug;
+    try { slug = decodeURIComponent(r.slug); } catch { /* keep as is */ }
+    const c = out.get(slug);
+    out.set(slug, c ? { views: c.views + r.views, visitors: c.visitors + r.visitors, avg: Math.max(c.avg, r.avg) } : { views: r.views, visitors: r.visitors, avg: r.avg });
+  }
+  return out;
+}
+
+/** Latest views of one product page, with who viewed it. */
+export async function productVisits(slug: string, take = 50) {
+  const views = await db.pageView.findMany({
+    where: { OR: productPathVariants(slug) }, orderBy: { at: 'desc' }, take,
+    include: { visit: { select: { id: true, visitorId: true, device: true, browser: true, source: true, ordered: true } } },
+  });
+  const customers = await customersByVisitor(views.map((v) => v.visit.visitorId));
+  return views.map((v) => ({ id: v.id, at: v.at, duration: v.duration, visit: v.visit, customer: customers.get(v.visit.visitorId) ?? null }));
+}
+
+export type CustomerRef = { id: number; name: string; phone: string };
+
+/** Visitors who placed an order are known customers (orders keep the browser's visitor id). */
+export async function customersByVisitor(visitorIds: string[]) {
+  const ids = [...new Set(visitorIds.filter(Boolean))];
+  if (!ids.length) return new Map<string, CustomerRef>();
+  const orders = await db.order.findMany({
+    where: { visitorId: { in: ids }, customerId: { not: null } }, orderBy: { createdAt: 'desc' },
+    select: { visitorId: true, customer: { select: { id: true, firstName: true, lastName: true, phone: true } } },
+  });
+  const out = new Map<string, CustomerRef>();
+  for (const o of orders) if (o.visitorId && o.customer && !out.has(o.visitorId)) out.set(o.visitorId, { id: o.customer.id, name: `${o.customer.firstName} ${o.customer.lastName}`, phone: o.customer.phone });
+  return out;
+}
+
+/** Everything one visitor (browser) did: all visits and every product seen, with time spent. */
+export async function visitorProfile(visitorIds: string[]) {
+  const ids = [...new Set(visitorIds.filter(Boolean))];
+  if (!ids.length) return null;
+  const visits = await db.visit.findMany({
+    where: { visitorId: { in: ids } }, orderBy: { startedAt: 'desc' },
+    include: { views: { select: { path: true, duration: true, at: true }, orderBy: { at: 'asc' } } },
+  });
+  if (!visits.length) return null;
+  const all = visits.flatMap((v) => v.views);
+  const map = await productsByPath(all.map((x) => x.path));
+  const seen = new Map<number, { product: ProductRef; views: number; seconds: number; last: Date }>();
+  for (const x of all) {
+    const p = productOf(map, x.path);
+    if (!p) continue;
+    const s = seen.get(p.id) ?? { product: p, views: 0, seconds: 0, last: x.at };
+    s.views++; s.seconds += x.duration; if (x.at > s.last) s.last = x.at;
+    seen.set(p.id, s);
+  }
+  const customer = [...(await customersByVisitor(ids)).values()][0] ?? null;
+  return {
+    customer,
+    visits: visits.map((v) => ({
+      id: v.id, startedAt: v.startedAt, lastSeen: v.lastSeen, landing: v.landing, source: v.source, device: v.device, browser: v.browser, os: v.os,
+      pageviews: v.pageviews, ordered: v.ordered, cartValue: v.cartValue,
+      seconds: v.views.reduce((s, x) => s + x.duration, 0) || Math.max(0, Math.round((v.lastSeen.getTime() - v.startedAt.getTime()) / 1000)),
+      products: v.views.filter((x) => productOf(map, x.path)).length,
+    })),
+    products: [...seen.values()].sort((a, b) => b.seconds - a.seconds || b.views - a.views),
+    totals: {
+      visits: visits.length,
+      pageviews: visits.reduce((s, v) => s + v.pageviews, 0),
+      seconds: all.reduce((s, x) => s + x.duration, 0),
+      first: visits[visits.length - 1].startedAt,
+      last: visits[0].lastSeen,
+    },
+  };
 }

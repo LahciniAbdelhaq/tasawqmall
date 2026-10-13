@@ -7,6 +7,7 @@ import { PageTitle } from '@/components/admin/bits';
 import { deleteProduct } from '../../../actions/catalog';
 import ProductForm from './ProductForm';
 import { ConfirmButton } from '@/components/admin/ui';
+import ProductVisitors from '@/components/admin/ProductVisitors';
 
 export const metadata = { title: 'Produit' };
 
@@ -41,6 +42,7 @@ export default async function ProductEdit({ params, searchParams }: { params: Pr
         locales={s.languages.enabled.filter((l) => l !== 'fr' && LOCALES[l]).map((l) => ({ code: l, name: LOCALES[l].name }))}
         siteUrl={s.seo.siteUrl}
       />
+      {p && <ProductVisitors slug={p.slug} />}
       {p && (
         <form action={deleteProduct} style={{ marginTop: 16 }}>
           <input type="hidden" name="id" value={p.id} />

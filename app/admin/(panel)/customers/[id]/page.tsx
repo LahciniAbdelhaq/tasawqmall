@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { db } from '@/lib/db';
-import { COUNTED } from '@/lib/analytics';
+import { COUNTED, visitorProfile } from '@/lib/analytics';
 import { PageTitle, StatusPill } from '@/components/admin/bits';
 import { fmtDate, money } from '@/lib/form';
 import CustomerForm from './CustomerForm';
+import VisitorHistory from '@/components/admin/VisitorHistory';
 
 export const metadata = { title: 'Client' };
 
@@ -13,6 +14,9 @@ export default async function CustomerPage({ params }: { params: Promise<{ id: s
   if (!c) notFound();
   const valid = c.orders.filter((o) => COUNTED.includes(o.status));
   const spent = valid.reduce((s, o) => s + o.total, 0);
+  // visits are linked through the browser id saved with each order
+  const vids = [...new Set(c.orders.map((o) => o.visitorId).filter((v): v is string => !!v))];
+  const visits = await visitorProfile(vids);
   return (
     <>
       <Link className="back-link" href="/admin/customers">← Clients</Link>
@@ -42,6 +46,8 @@ export default async function CustomerPage({ params }: { params: Promise<{ id: s
         </div>
         <CustomerForm c={{ id: c.id, firstName: c.firstName, lastName: c.lastName, phone: c.phone, email: c.email ?? '', city: c.city ?? '', address: c.address ?? '', note: c.note ?? '', blocked: c.blocked }} />
       </div>
+      <h2 style={{ margin: '24px 0 12px' }}>Historique des visites</h2>
+      {visits ? <VisitorHistory p={visits} embedded /> : <div className="card card-pad muted">Aucune visite enregistrée pour ce client (commande passée avant le suivi des visites, ou depuis un autre navigateur).</div>}
     </>
   );
 }

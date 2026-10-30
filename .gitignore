@@ -9,3 +9,8 @@ storage/
 .next-dev
 .next-*
 .vercel
+node_modules/
+.venv/
+venv/
+__pycache__/
+/.next/cache/webpack/server-production/0.pack
